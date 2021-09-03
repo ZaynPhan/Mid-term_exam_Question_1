@@ -21,11 +21,13 @@ public class App {
         System.out.println();
 
         //b. Viết in hoa toàn bộ chữ đầu của các từ trong chuỗi đó
-        System.out.format("New string with uppercase first character is\n%s", Question1.upperFirstChar(str));
+        System.out.println("Capitalizing first letters of every word in" +
+                " a string will be:\n " + Question1.toFirstUCCharInWord(str));
 
         //c. Chuyển ký tự đầu tiên của chuỗi hoặc ký tự đầu tiên của từ sau dấu chấm là viết in hoa,
         // các chữ con lại viết thường
-
+        System.out.println("Capitalizing first letters of every sentence in " +
+                "a string will be:\n " + Question1.toFirstUCCharInSentence(str));
 
     }
 }

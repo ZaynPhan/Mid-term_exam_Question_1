@@ -13,23 +13,21 @@ public class Question1 {
         return sumWord;
     }
 
-    public static String upperFirstChar(String s) {
-        char[] arr = s.toCharArray();
-        for (int i = 0; i < arr.length; i++) {
-            if (Character.toString(arr[i]).equals(" ")) {
-                if (Character.isLetter(arr[i + 1])) {
-                    arr[i + 1] = Character.toUpperCase(arr[i + 1]);
-                }
-            }
+    public static String toFirstUCCharInWord(String s) {
+        String resultS = "";
+        String[] arrS = s.split(" ");
+        for (int i = 0; i < arrS.length; i++) {
+            resultS = resultS + arrS[i].substring(0, 1).toUpperCase() + arrS[i].substring(1) + " ";
         }
-        return s;
+        return resultS;
     }
 
-    public static String uppercaseCharAfterDot(String s) {
+    public static String toFirstUCCharInSentence(String s) {
         char[] arr = s.toCharArray();
-        do {
-            if(Character.isLetter(arr[0]))
-        } while (arr[i])
-        return s;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == '.')
+                arr[i + 2] = Character.toUpperCase(arr[i + 2]);
+        }
+        return String.valueOf(arr);
     }
 }
